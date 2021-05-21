@@ -396,37 +396,8 @@ $campaign_donations->create();
       <script src="https://js.paystack.co/v1/inline.js"></script>  
 <script>
 // payWithPaystack API//
-  function payWithPaystack(){
-    var handler = PaystackPop.setup({
-      key: 'pk_live_d0bbea7f24c60dcab78440fada77da8b770d07d3',
-      email: '<?php echo $email;?>',
-      amount: <?php echo $amount;?>,
-      ref: 'PL'+Math.floor((Math.random() * 10000000) + 1), // generates a pseudo-unique reference for each transaction
-      lastname: '<?php echo $name;?>',
-      // label: "Optional string that replaces customer email"
-      metadata: {
-         custom_fields: [
-            {
-                display_name: "Campaign Id",
-                variable_name: "campaign_id",
-                value: <?php echo $campaign_id;?>
-            }
-         ]
-      },
-      callback: function(response){
-       var payment_id = "<?php echo $payment_id ?>";
-       var amount = "<?php echo $amount ?>";
-       var name = "<?php echo $name ?>";
-       var campaign_id = "<?php echo $campaign_id ?>";
-      
-window.location="http://projectlive.ng/campaign-donation-page-success.php?name="+name+"&campaign_id="+campaign_id+"&amount="+amount+"&payment_id="+payment_id+"&reference=" + response.reference;
-      },
-      onClose: function(){
-          alert('window closed');
-      }
-    });
-    handler.openIframe();
-  }
+  function payWithPaystack(){}
+    
 </script>
  <script type="text/javascript">
   $(document).ready(function(e) {
