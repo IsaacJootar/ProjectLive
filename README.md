@@ -4,7 +4,7 @@
 **ProjectLive Africa** is crowdfunding platform for charity projects in africa. 
 
 
-**First Launched  by **Isaac Jootar 2018**
+**First Launched  by **Isaac Jootarin 2018**
 
 
 
